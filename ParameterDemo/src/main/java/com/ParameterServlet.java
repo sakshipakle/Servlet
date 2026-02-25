@@ -17,7 +17,7 @@ public class ParameterServlet extends HttpServlet {
 
         response.setContentType("text/html");
 
-        PrintWriter pw = response.getWriter();  // ✔ first declare
+        PrintWriter pw = response.getWriter();  
 
         String name = request.getParameter("username");
 
