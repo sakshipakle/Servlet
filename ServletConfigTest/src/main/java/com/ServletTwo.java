@@ -10,11 +10,11 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-//@WebServlet("/ServletConfigClass")
-public class ServletConfigClass extends HttpServlet {
+//@WebServlet("/ServletTwo")
+public class ServletTwo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-  
-    public ServletConfigClass() {
+   
+    public ServletTwo() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -24,8 +24,8 @@ public class ServletConfigClass extends HttpServlet {
 		PrintWriter pw = response.getWriter();
 		
 		ServletConfig sc = getServletConfig();
-		String n = sc .getInitParameter("Name");
-		String s = sc.getInitParameter("Surname");
+		String n = sc .getInitParameter("driver");
+		String s = sc.getInitParameter("setting");
 		
 		pw.println("Your init parameter is : "+n+" "+s);
 		
@@ -33,6 +33,12 @@ public class ServletConfigClass extends HttpServlet {
 		String p1 = context.getInitParameter("project");
 		pw.println("Context Parameter is : "+p1);
 		pw.close();
+		
 	}
-  
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
 }

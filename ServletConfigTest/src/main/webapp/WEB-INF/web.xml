@@ -19,12 +19,44 @@
 <param-name>Name</param-name>
 <param-value>Sakshi</param-value>
 </init-param>
+
+<init-param> 
+<param-name>Surname</param-name>
+<param-value>Pakle</param-value>
+</init-param>
  
 </servlet>
+
+<servlet>
  
+<servlet-name>ServletTwo</servlet-name>
+<servlet-class>com.ServletTwo</servlet-class>
+ 
+ <init-param> 
+<param-name>driver</param-name>
+<param-value>com.mysql</param-value>
+</init-param>
+
+<init-param> 
+<param-name>setting</param-name>
+<param-value>file</param-value>
+</init-param>
+
+</servlet>
+
+<context-param> 
+<param-name>project</param-name>
+<param-value>general</param-value>
+</context-param>
+ 
+  
 <servlet-mapping>
 <servlet-name>ServletConfigClass</servlet-name>
 <url-pattern>/ServletConfigClass</url-pattern>
+ </servlet-mapping>
  
-</servlet-mapping>
+ <servlet-mapping>
+<servlet-name>ServletTwo</servlet-name>
+<url-pattern>/ServletTwo</url-pattern>
+ </servlet-mapping>
 </web-app>
